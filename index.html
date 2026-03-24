@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NeuroLens AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Logo -->
+    <div class="logo">🧠 NeuroLens AI</div>
+    <p class="tagline">Advanced Cognitive Prediction & Mind Analysis System</p>
+
+    <!-- Category -->
+    <div id="categoryBox" class="card">
+        <p>Select Analysis Mode</p>
+        <button onclick="start('career')">💼 Career</button>
+        <button onclick="start('movie')">🎬 Movie</button>
+        <button onclick="start('food')">🍔 Food</button>
+    </div>
+
+    <!-- Questions -->
+    <div id="questionBox" class="card hidden">
+        <p id="progress"></p>
+        <h2 id="questionText"></h2>
+
+        <div class="btn-group">
+            <button onclick="answer('yes')">Yes</button>
+            <button onclick="answer('no')">No</button>
+        </div>
+
+        <!-- Voice Button -->
+        <button class="mic-btn" onclick="startVoice()">🎤 Speak Answer</button>
+    </div>
+
+    <!-- Result -->
+    <div id="resultBox" class="card hidden">
+        <div id="loading"></div>
+        <h2 id="result"></h2>
+        <p id="confidence"></p>
+        <button onclick="location.reload()">🔄 Try Again</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
